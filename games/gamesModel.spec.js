@@ -19,7 +19,8 @@ describe('Games Model functions', () => {
 
             expect(game.title).toBe('Asteroids');
             expect(game.genre).toBe('Arcade');
-        })
+            expect(game.releaseYear).toBe(1981);
+        });
 
-    })
+    });
 })
