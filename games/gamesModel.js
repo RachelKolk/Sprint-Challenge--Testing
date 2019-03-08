@@ -3,6 +3,7 @@ const db = require('../data/dbConfig.js');
 module.exports = {
     insert,
     getAll,
+    findById
 };
 
 async function insert(game) {
@@ -15,4 +16,8 @@ async function insert(game) {
 
 function getAll() {
     return db('games');
+}
+
+function findById(id) {
+    return db('games').where({id: Number(id)});
 }
