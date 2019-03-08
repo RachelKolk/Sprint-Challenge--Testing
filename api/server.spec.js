@@ -46,4 +46,21 @@ describe('server.js', () => {
         });
         
     });
-})
+
+    describe('GET /games', () => {
+        it('should return ok, 200', async () => {
+            const res = await request(server).get('/games');
+
+            expect(res.status).toBe(200);
+        });
+
+        it('should return JSON', async () => {
+            const res = await request(server).get('/games');
+
+            expect(res.type).toBe('application/json');
+        });
+
+        
+    });
+    
+});
