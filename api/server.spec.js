@@ -39,10 +39,11 @@ describe('server.js', () => {
             expect(res.status).toBe(422);
         });
 
-        it('should error without body'), async () => {
+        it('should error without body', async () => {
             const res = await request(server).post('/games');
 
-            expect(res.status).toBe(500);
-        }
+            expect(res.status).toBe(422);
+        });
+        
     });
 })
